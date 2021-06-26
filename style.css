@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-image: linear-gradient(45deg, #2196f3, orange);
+}
+
+.multistep_form {
+  max-width: 600px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 1px 5px #0001, 0 1px 15px #0001, 0 1px 25px #0001;
+  overflow: hidden;
+}
+.multistep_form .form_top_steps {
+  padding: 15px;
+  background-image: linear-gradient(-45deg, orangered, orange);
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  font-weight: 600;
+}
+.multistep_form .form_top_steps::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 4px;
+  width: calc(100% - 30px);
+  transform: translate(-50%, -50%);
+  background-color: #fff8;
+}
+
+.multistep_form .form_top_steps > * {
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  line-height: 1;
+  z-index: 2;
+  box-shadow: -2px -2px 5px #fff5, 2px 2px 5px #0005;
+}
+
+.multistep_form .form_top_steps > *.active {
+  color: #fff;
+  background-color: #4a9bda;
+}
+
+.multistep_form .step_container {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.69, 1.21, 0.53, 1.21);
+}
+
+.multistep_form .step_container .form_step {
+  padding: 0 15px;
+  min-width: 100%;
+}
+
+.multistep_form .step_container .form_step .form_head {
+  padding: 10px 0;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+}
+
+.multistep_form .step_container .form_step .form_body {
+  border-top: 1px solid #0001;
+  border-bottom: 1px solid #0001;
+  padding: 15px 0;
+}
+
+.multistep_form .step_container .form_step .form_footer {
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.multistep_form .step_container .form_step .form_footer button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 10px 25px;
+  color: #fff;
+  box-shadow: 0 1px 5px #0001, 0 1px 10px #0001, 0 1px 15px #0001;
+  text-transform: uppercase;
+}
+
+.multistep_form .step_container .form_step .form_footer button.prev {
+  background-color: #008fff;
+}
+.multistep_form .step_container .form_step .form_footer button.next {
+  background-color: #78c742;
+}
+.multistep_form .step_container .form_step .form_footer button.submit {
+  background-image: linear-gradient(45deg, orange, orangered);
+  border-radius: 30px;
+}
+
+/* extra for form design start */
+.form_group {
+  margin-bottom: 15px;
+}
+.form_control {
+  border: 1px solid #0002;
+  background-color: transparent;
+  outline: none;
+  padding: 8px 12px;
+  width: 100%;
+  color: #333;
+}
+
+.form_control::placeholder {
+  color: inherit;
+  opacity: 0.5;
+}
+
+.form_control:is(:hover, :focus) {
+  box-shadow: inset 0 1px 6px #0002;
+  border-radius: 5px;
+}
+/* extra for form design end */

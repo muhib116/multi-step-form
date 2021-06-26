@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multistep Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form action="#" class="multistep_form">
+      <div class="form_top_steps">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+      </div>
+      <div class="step_container">
+        <div class="form_step">
+          <div class="form_head">This is step one</div>
+          <div class="form_body">
+            <div class="form_group">
+              <input
+                type="text"
+                placeholder="Username..."
+                class="form_control"
+              />
+            </div>
+            <div class="form_group">
+              <input type="text" placeholder="Email..." class="form_control" />
+            </div>
+          </div>
+          <div class="form_footer">
+            <button type="button" class="next">Next</button>
+          </div>
+        </div>
+
+        <div class="form_step">
+          <div class="form_head">This is step two</div>
+          <div class="form_body">
+            <div class="form_group">
+              <input
+                type="text"
+                placeholder="Twitter..."
+                class="form_control"
+              />
+            </div>
+            <div class="form_group">
+              <input
+                type="text"
+                placeholder="Facebook..."
+                class="form_control"
+              />
+            </div>
+            <div class="form_group">
+              <input
+                type="text"
+                placeholder="Linkedin..."
+                class="form_control"
+              />
+            </div>
+          </div>
+          <div class="form_footer">
+            <button type="button" class="prev">Prev</button>
+            <button type="button" class="next">Next</button>
+          </div>
+        </div>
+
+        <div class="form_step">
+          <div class="form_head">This is Final Step</div>
+          <div class="form_body">
+            <div class="form_group">
+              <input
+                type="text"
+                placeholder="First Name..."
+                class="form_control"
+              />
+            </div>
+            <div class="form_group">
+              <input
+                type="text"
+                placeholder="Last Name..."
+                class="form_control"
+              />
+            </div>
+            <div class="form_group">
+              <input type="text" placeholder="Phone..." class="form_control" />
+            </div>
+            <div class="form_group">
+              <textarea placeholder="Phone..." class="form_control"></textarea>
+            </div>
+          </div>
+          <div class="form_footer">
+            <button type="button" class="prev">Prev</button>
+            <button type="submit" class="submit">Submit</button>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <script src="app.js"></script>
+  </body>
+</html>
